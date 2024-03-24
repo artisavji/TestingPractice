@@ -10,7 +10,7 @@ public class Multilevel {
         }
         class son
         {
-            String
+            String i;
 
     }
 
