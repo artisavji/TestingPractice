@@ -8,7 +8,7 @@ public class Singleinheritance1 {
         }
         class father extends grandfather
         {
-            String son;w
+            String son;
             String Investment="Gold";
 
         }
