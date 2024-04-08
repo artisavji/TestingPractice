@@ -25,6 +25,5 @@ public class Hello_World {
         int Multiplication=(M1*M2);
         System.out.println(Multiplication);
 
-
     }
 }
