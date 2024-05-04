@@ -1,6 +1,7 @@
 package org.example;
 // 17 April Assign:-Launch SpurQ URL using @Test
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,9 +14,9 @@ public class SeleniumPractice3 {
 
     @BeforeTest
     public static void setup() {
-
+       WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.get("https://www.google.co.in/");
+        driver.get("https://www.google.com/");
         driver.navigate().to("https://spurquest.com/");
         driver.manage().window().maximize();//move to next url
     }
@@ -32,7 +33,6 @@ public class SeleniumPractice3 {
         driver.findElement(By.xpath("(//ul[@id='menu-primary-menu']//ul//li//a[@href='https://spurquest.com/'])[1]")).click();
 
     }
-
     @AfterTest
     public static void tearDown() {
         driver.quit();
